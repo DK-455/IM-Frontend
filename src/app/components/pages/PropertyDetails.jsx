@@ -1988,7 +1988,7 @@ const PropertyDetails = () => {
                         },
                         mobile: { breakpoint: { max: 464, min: 0 }, items: 1 },
                       }}
-                      // infinite={true}
+                      infinite={true}
                       containerClass="carousel-container"
                       itemClass="carousel-item-padding-40-px"
                       style={{ width: "60%", margin: "0 auto" }}

@@ -133,17 +133,18 @@
   background: #2067D1;
   color: #fff;
   border-radius: 50%;
-  display: flex
-;
+  display: flex;
   align-items: center;
   justify-content: center;
   z-index: 10;
 }
 .swiper-button-prev {
   left: 45%;
+  z-index: 10 !important;
 }
 .swiper-button-next {
   right: 45%;
+  z-index: 10 !important;
 }
 /* Optional: Add hover effect */
 .swiper-button-prev:hover,
@@ -153,10 +154,12 @@
 @media (max-width: 850px) {
   .swiper-button-prev {
     left: 30%; /* Adjust based on your needs */
+    z-index: 10 !important;
   }
 
   .swiper-button-next {
     right: 30%; /* Adjust based on your needs */
+    z-index: 10 !important;
   }
 }
 
@@ -171,3 +174,6 @@
   }
 }
 
+.swiper-button-next, .swiper-button-prev {
+  z-index: 10 !important;
+}

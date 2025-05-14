@@ -268,6 +268,9 @@ const Footer = () => {
                     <Link to="/contact">Contact Us</Link>
                   </li>
                   <li>
+                    <Link to="/compare">Compare Projects</Link>
+                  </li>
+                  <li>
                     <Link to="/career">Careers</Link>
                   </li>
                   <li>
@@ -280,32 +283,32 @@ const Footer = () => {
                 <h5 className="headline">Our Projects</h5>
                 <ul>
                   <li>
-                    <a href="https://propertymarvels.in/project/ace-divino">
+                    <a href="https://propertymarvels.in/ace-divino">
                       ACE Divino
                     </a>
                   </li>
                   <li>
-                    <a href="https://propertymarvels.in/project/godrej-woods-sector-43-noida">
+                    <a href="https://propertymarvels.in/godrej-woods-sector-43-noida">
                       Godrej Woods
                     </a>
                   </li>
                   <li>
-                    <a href="https://propertymarvels.in/project/ace-starlit-sector-152-noida">
+                    <a href="https://propertymarvels.in/ace-starlit-sector-152-noida">
                       ACE Starlit
                     </a>
                   </li>
                   <li>
-                    <a href="https://propertymarvels.in//project/nirala-aspire-sector-16-greater-noida-west">
+                    <a href="https://propertymarvels.in/nirala-aspire-sector-16-greater-noida-west">
                       Nirala Aspire Low Rise Phase IV
                     </a>
                   </li>
                   <li>
-                    <a href="https://propertymarvels.in/project/ace-terra-yamuna-expressway">
+                    <a href="https://propertymarvels.in/ace-terra-yamuna-expressway">
                       ACE Terra
                     </a>
                   </li>
                   <li>
-                    <a href="https://propertymarvels.in/project/max-antara-sector-150-noida">
+                    <a href="https://propertymarvels.in/max-antara-sector-150-noida">
                       Max Antara
                     </a>
                   </li>

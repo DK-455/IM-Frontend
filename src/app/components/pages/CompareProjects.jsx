@@ -86,6 +86,11 @@ const CompareProjects = () => {
     setAnchorEl(null);
   };
 
+    useEffect(() => {
+      // Scroll to the top when the page loads
+      window.scrollTo(0, 0);
+    }, []);
+
   const renderProjectData = (project, field) => {
     switch (field) {
       case "Image":

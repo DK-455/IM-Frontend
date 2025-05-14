@@ -94,6 +94,7 @@ const Video = () => {
                           style={{
                             boxShadow: "2px 2px 5px 0px #00000057",
                             background: "white",
+                            marginTop: "10px",
                           }}
                         >
                           {project.videos && project.videos.length > 0 ? (
