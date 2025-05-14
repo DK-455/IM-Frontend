@@ -1,6 +1,6 @@
 services:
   bma-frontend:
-    image: ghcr.io/vi-im/bma-frontend:${IMAGE_TAG:-latest}
+    image: ghcr.io/deepuprajapat/im-frontend:${IMAGE_TAG}
     container_name: IM_Frontend
     ports:
       - "3000:3000"
