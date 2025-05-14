@@ -1,7 +1,7 @@
 services:
   bma-frontend:
     image: ghcr.io/vi-im/bma-frontend:${IMAGE_TAG:-latest}
-    container_name: bma-frontend
+    container_name: IM_Frontend
     ports:
       - "3000:3000"
     restart: always
