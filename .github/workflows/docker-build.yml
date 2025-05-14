@@ -4,20 +4,25 @@ on:
   push:
     branches:
       - main
+      - master
 
 jobs:
-  build:
+  build-and-push:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-      
-      - name: Build & push Docker image
-        uses: mr-smithers-excellent/docker-build-push@v6
-        with:
-          image: invest/frontend
-          tags: ${{ github.sha }}, latest
-          registry: registry.virtualintelligence.co.in
-          dockerfile: dockerfile
-          username: ${{ secrets.REGISTRY_USERNAME }}
-          password: ${{ secrets.REGISTRY_PASSWORD }}
+
+      - name: Set up Docker image tag
+        run: echo "TAG=${GITHUB_SHA::7}" >> $GITHUB_ENV
+
+      - name: Log in to GHCR
+        run: echo "${{ secrets.GHCR_PAT }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
+
+      - name: Build Docker image
+        run: |
+          docker build -f dockerfile -t ghcr.io/deepuprajapat/im-frontend:${{ env.TAG }} .
+      - name: Push Docker image
+        run: |
+          docker push ghcr.io/deepuprajapat/im-frontend:${{ env.TAG }}
