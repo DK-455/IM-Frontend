@@ -29,7 +29,6 @@ jobs:
       - name: Push Docker image
         run: |
           docker push ghcr.io/deepuprajapat/im-frontend:${{ env.TAG }}
-          docker push ghcr.io/deepuprajapat/im-frontend:latest
 
       - name: Deploy to EC2
         uses: appleboy/ssh-action@v1.0.0
@@ -49,7 +48,6 @@ jobs:
 
             # Pull the new Docker image
             sudo docker pull ghcr.io/deepuprajapat/im-frontend:$IMAGE_TAG
-            sudo docker pull ghcr.io/deepuprajapat/im-frontend:latest
 
             # Create .env file with tag
             echo "IMAGE_TAG=$IMAGE_TAG" > .env
